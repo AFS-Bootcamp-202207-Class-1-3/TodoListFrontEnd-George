@@ -1,3 +1,4 @@
+import "./TodoList.css"
 function TodoGenerator(props) {
     const {addTodo, contents} = props
     const onClick = () => {
@@ -9,8 +10,8 @@ function TodoGenerator(props) {
     }
     return(
        <div>
-            <input type="text" id="contentValue"></input>
-            <button onClick={onClick}>add</button>
+            <input className="input" type="text" id="contentValue"></input>
+            <button className="button" onClick={onClick}>add</button>
        </div> 
     )
 }
