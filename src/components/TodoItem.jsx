@@ -1,8 +1,8 @@
-function TodoItem() {
-    const data = "This is the first todo item"
+function TodoItem(props) {
+    const {content} = props
     return(
         <div >
-            <input value={data}/>
+            <input value={content}/>
       </div>
     )   
 }

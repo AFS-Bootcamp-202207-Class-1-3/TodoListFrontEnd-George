@@ -1,11 +1,11 @@
 import TodoItem from "./TodoItem"
 
-function TodoGroup() {
+function TodoGroup(props) {
+    const {contents} = props
+    const items = contents.map((content, index) => (<TodoItem key={index} content={content}/>))
     return(
         <div>
-            <TodoItem/>
-            <TodoItem/>
-            <TodoItem/>
+            {items}
         </div>
     )
 }
