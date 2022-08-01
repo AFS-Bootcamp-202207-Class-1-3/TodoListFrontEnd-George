@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   return (
-    <div >
-      
+    <div className="App">
+      <TodoItem/>
     </div>
   );
 }
 
 export default App;
+
