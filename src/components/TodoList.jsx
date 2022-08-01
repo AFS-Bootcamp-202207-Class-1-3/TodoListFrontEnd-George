@@ -4,14 +4,14 @@ import TodoGroup from "./TodoGroup";
 
 function TodoList() {
     const [contents, setContents] = useState([])
-    const addTodo = (content) => {
-        setContents([...content])
+    const changeTodo = (contents) => {
+        setContents([...contents])
     }
     return(
         <div>
             <h1>Todo List</h1>
-            <TodoGroup contents={contents}/>
-            <TodoGenerator contents={contents} addTodo={addTodo}/>
+            <TodoGroup contents={contents} changeTodo={changeTodo}/>
+            <TodoGenerator contents={contents} changeTodo={changeTodo}/>
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import TodoItem from "./TodoItem"
 
 function TodoGroup(props) {
-    const {contents} = props
-    const items = contents.map((content, index) => (<TodoItem key={index} content={content}/>))
+    const {contents, changeTodo} = props
+    const items = contents.map((content, index) => (<TodoItem key={index} index={index} content={content} contents={contents} changeTodo={changeTodo}/>))
     return(
         <div>
             {items}

@@ -20,3 +20,16 @@
     width: 80px;
     margin: 5px;
   }
+
+  .deletebutton {
+    display: inline-block;
+    background-color: red;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 80px;
+    margin: 5px;
+  }

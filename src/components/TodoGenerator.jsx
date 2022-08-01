@@ -1,11 +1,11 @@
 import "./TodoList.css"
 function TodoGenerator(props) {
-    const {addTodo, contents} = props
+    const {changeTodo, contents} = props
     const onClick = () => {
         const contentValue = document.getElementById("contentValue").value
         if (contentValue.length !== 0)  {
             contents.push(contentValue)
-            addTodo(contents)
+            changeTodo(contents)
         }
     }
     return(
