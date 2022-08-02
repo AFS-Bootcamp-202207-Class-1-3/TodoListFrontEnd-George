@@ -33,3 +33,7 @@
     width: 80px;
     margin: 5px;
   }
+
+  .input-decoration {
+    text-decoration: line-through
+  }

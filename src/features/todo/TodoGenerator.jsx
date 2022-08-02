@@ -1,9 +1,8 @@
 import "./TodoList.css"
 import {useState} from "react"
 import {useDispatch} from "react-redux"
-// import {addContent} from "./todoSlice"
-function TodoGenerator(props) {
-    const {contents} = props
+import {add} from "./todoSlice"
+function TodoGenerator() {
     const [text, setText] = useState("")
     const dispatch = useDispatch()
     const changeContent = (event) => {
@@ -11,13 +10,16 @@ function TodoGenerator(props) {
     }
     const clickAdd = () => {
         if (text.length !== 0)  {
-            const addedContents = [...contents, text] 
-            // dispatch(addContent())
+            const todo = {
+                context: text,
+                done: false
+            }
+            dispatch(add(todo))
         }
     }
     return(
        <div>
-            <input className="input" type="text" id="contentValue" onChange={changeContent}></input>
+            <input className="input" type="text" onChange={changeContent}></input>
             <button className="button" onClick={clickAdd}>add</button>
        </div> 
     )
