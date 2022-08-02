@@ -1,13 +1,14 @@
 import "./TodoList.css"
 function TodoItem(props) {
-    const {content, contents, changeTodo, index} = props
+    const {context} = props
     const deleteTodo = () => {
-        contents.splice(index, 1)
-        changeTodo(contents)
+        // contents.splice(index, 1)
+        // changeTodo(contents)
     }
     return(
         <div >
-            <input className="input" value={content} readOnly/>
+            {context}
+            <input className="input"  readOnly/>
             <button onClick={deleteTodo} className="deletebutton">delete</button>
       </div>
     )   
