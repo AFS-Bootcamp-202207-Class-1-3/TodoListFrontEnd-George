@@ -35,5 +35,12 @@
   }
 
   .input-decoration {
-    text-decoration: line-through
+    text-decoration: line-through;
+    border:0;
+    outline:0;
+    border:solid 1px black;
+    width: 600px;
+    height: 50px;
+    font-size: 20px;
+    margin: 10px;
   }

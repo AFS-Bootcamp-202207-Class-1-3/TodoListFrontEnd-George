@@ -16,6 +16,7 @@ const todoSlice = createSlice({
             state.todos.splice(action.payload,1)
         },
         changeStatus(state, action) {
+            console.log(state.todos[action.payload])
             state.todos[action.payload].done  = !state.todos[action.payload].done
         }
     }

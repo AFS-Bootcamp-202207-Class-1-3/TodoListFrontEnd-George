@@ -4,16 +4,17 @@ import {deleteItem, changeStatus} from "./todoSlice"
 
 function TodoItem(props) {
     const dispatch = useDispatch()
-    const {id, todo} = props
+    const {todo, index} = props
     const deleteTodo = () => {
-        dispatch(deleteItem(id))
+        dispatch(deleteItem(index))
     }
     const handleDone = () => {
-        dispatch(changeStatus(id))
+        dispatch(changeStatus(index))
     }
     return(
         <div >
-            <input className={todo.done ? "input-decoration" : "input"} value={todo.context} readOnly onClick={handleDone}/>
+            <input className={todo.done ? "input-decoration" : "input"} 
+            value={todo.context} readOnly onClick={handleDone}/>
             <button onClick={deleteTodo} className="deletebutton">delete</button>
       </div>
     )   

@@ -3,7 +3,8 @@ import {useSelector} from "react-redux"
 
 function TodoGroup() {
     const todos = useSelector(state => state.todo.todos)
-    const todoList = todos.map((todo) => <TodoItem key={todo.id} id={todo.id} todo={todo}/>)
+    const todoList 
+        = todos.map((todo, index) => <TodoItem key={todo.id} todo={todo} index={index}/>)
     return(
         <div>
             {todoList}
