@@ -19,7 +19,7 @@ function TodoGenerator() {
     setText("");
   };
   return (
-    <div>
+    <div className="item">
       <input
         className="input"
         type="text"

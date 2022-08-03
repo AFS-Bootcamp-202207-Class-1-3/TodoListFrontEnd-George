@@ -11,7 +11,7 @@ function TodoGroup() {
     getTodos().then((response) => {
       dispatch(addTodos(response.data));
     });
-  }, []);
+  }, [dispatch]);
   const todoList = todos.map((todo) => <TodoItem key={todo.id} todo={todo} />);
   return <div>{todoList}</div>;
 }
