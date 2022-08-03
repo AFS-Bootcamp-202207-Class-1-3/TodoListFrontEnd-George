@@ -1,12 +1,20 @@
 import { Link, Outlet } from "react-router-dom";
-import "../todo/TodoList.css"
+import "../todo/TodoList.css";
 function Layout() {
   return (
     <div className="layout">
       <nav className="item">
-        <Link className="link" to="/todo">Home</Link> &nbsp;
-        <Link className="link" to="/about">About</Link> &nbsp;
-        <Link className="link" to="/todo/done">Done</Link>
+        <Link className="link" to="/todo">
+          Home
+        </Link>{" "}
+        &nbsp;
+        <Link className="link" to="/about">
+          About
+        </Link>{" "}
+        &nbsp;
+        <Link className="link" to="/todo/done">
+          Done
+        </Link>
       </nav>
       <div className="content">
         <Outlet />

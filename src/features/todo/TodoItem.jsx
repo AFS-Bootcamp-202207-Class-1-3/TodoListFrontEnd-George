@@ -1,8 +1,8 @@
 import "./TodoList.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteItem, changeStatus ,updateContent} from "./todoSlice";
-import { putTodo, deleteTodo, putContent} from "../apis/todoApi";
+import { deleteItem, changeStatus, updateContent } from "./todoSlice";
+import { putTodo, deleteTodo, putContent } from "../apis/todoApi";
 import { EditOutlined } from "@ant-design/icons";
 import TextArea from "antd/lib/input/TextArea";
 import { Modal } from "antd";
@@ -13,8 +13,8 @@ function TodoItem(props) {
   const dispatch = useDispatch();
   const { todo } = props;
   const handleTextChange = (event) => {
-    setText(event.target.value)
-  }
+    setText(event.target.value);
+  };
   const handleDeleteTodo = () => {
     deleteTodo(todo.id).then((reponse) => {
       dispatch(deleteItem(reponse.data));
@@ -25,11 +25,11 @@ function TodoItem(props) {
     setVisible(true);
   };
   const handleOk = () => {
-    putContent(todo.id, {content: text}).then((response) => {
+    putContent(todo.id, { content: text }).then((response) => {
       console.log(response.data);
-      dispatch(updateContent(response.data))
-    })
-    setText("")
+      dispatch(updateContent(response.data));
+    });
+    setText("");
     setVisible(false);
   };
   const handleCancel = () => {
