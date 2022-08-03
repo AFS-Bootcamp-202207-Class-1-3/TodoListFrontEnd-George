@@ -2,6 +2,8 @@ import "./TodoList.css";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { add } from "./todoSlice";
+import { postTodo } from "../apis/todoApi";
+
 function TodoGenerator() {
   const [text, setText] = useState("");
   const dispatch = useDispatch();
@@ -10,11 +12,9 @@ function TodoGenerator() {
   };
   const clickAdd = () => {
     if (text.length !== 0) {
-      const todo = {
-        context: text,
-        done: false,
-      };
-      dispatch(add(todo));
+      postTodo({ content: text }).then((response) => {
+        dispatch(add(response.data));
+      });
     }
     setText("");
   };
