@@ -1,15 +1,14 @@
-import TodoGenerator from "./TodoGenerator"
+import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 
 function TodoList() {
-
-    return(
-        <div>
-            <h1>Todo List</h1>
-            <TodoGroup/>
-            <TodoGenerator/>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Todo List</h1>
+      <TodoGenerator />
+      <TodoGroup />
+    </div>
+  );
 }
 
-export default TodoList
+export default TodoList;

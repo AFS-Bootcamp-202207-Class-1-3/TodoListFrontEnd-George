@@ -1,46 +1,33 @@
 .input {
-    border:0;
-    outline:0;
-    border:solid 1px black;
-    width: 600px;
-    height: 50px;
-    font-size: 20px;
-    margin: 10px;
+  border: 0;
+  outline: 0;
+  border: solid 1px black;
+  width: 600px;
+  height: 50px;
+  font-size: 20px;
+  margin: 10px;
 }
 
 .button {
-    display: inline-block;
-    background-color: #1976D2;
-    border-radius: 10px;
-    border: 4px double #cccccc;
-    color: #eeeeee;
-    text-align: center;
-    font-size: 10px;
-    padding: 20px;
-    width: 80px;
-    margin: 5px;
-  }
+  display: inline-block;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 10px;
+  padding: 20px;
+  width: 80px;
+  margin: 5px;
+}
 
-  .deletebutton {
-    display: inline-block;
-    background-color: red;
-    border-radius: 10px;
-    border: 4px double #cccccc;
-    color: #eeeeee;
-    text-align: center;
-    font-size: 15px;
-    padding: 20px;
-    width: 80px;
-    margin: 5px;
-  }
+.delete-button {
+  background-color: red;
+}
 
-  .input-decoration {
-    text-decoration: line-through;
-    border:0;
-    outline:0;
-    border:solid 1px black;
-    width: 600px;
-    height: 50px;
-    font-size: 20px;
-    margin: 10px;
-  }
+.general-button {
+  background-color: #1976D2;
+}
+
+.input-decoration {
+  text-decoration: line-through;
+}
