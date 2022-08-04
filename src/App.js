@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/todo" element={<TodoList />}></Route>
+          <Route path="/" element={<TodoList />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/todo/done" element={<DoneItem />}></Route>
           <Route path="/*" element={<NotFound />}></Route>

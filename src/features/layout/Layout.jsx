@@ -4,7 +4,7 @@ function Layout() {
   return (
     <div className="layout">
       <nav className="item">
-        <Link className="link" to="/todo">
+        <Link className="link" to="/">
           Home
         </Link>{" "}
         &nbsp;
