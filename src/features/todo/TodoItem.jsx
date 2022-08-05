@@ -18,11 +18,12 @@ function TodoItem(props) {
   };
   const handleDeleteTodo = () => {
     deleteTodo(todo.id).then((reponse) => {
-      setGlobalLoading(true)
-      dispatch(deleteItem(reponse.data));
-      window.location.reload() 
+      setGlobalLoading(true);
+      if (reponse.status === 204) {
+        dispatch(deleteItem(todo.id));
+      }
     });
-    setGlobalLoading(false)
+    setGlobalLoading(false);
   };
   const handleUpdateContent = (event) => {
     event.stopPropagation();
@@ -46,7 +47,7 @@ function TodoItem(props) {
     });
   };
   return (
-    <Spin  tip="Loading..." spinning={globalLoading}>
+    <Spin tip="Loading..." spinning={globalLoading}>
       <div className="item">
         <div
           style={{ textDecoration: todo.done ? "line-through" : "" }}

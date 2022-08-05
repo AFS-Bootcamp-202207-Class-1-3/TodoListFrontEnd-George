@@ -13,7 +13,7 @@ const todoSlice = createSlice({
     },
     deleteItem(state, action) {
       return {
-        todos: state.todos.filter((todo) => todo.id !== action.payload.id),
+        todos: state.todos.filter((todo) => todo.id !== action.payload),
       };
     },
     changeStatus(state, action) {
